@@ -1,0 +1,376 @@
+.box3,
+.box4,
+.box5
+{
+    cursor: pointer;
+   
+}
+.items
+{
+    /* background-image: url(../imgs/XO\ back.PNG); */
+    background-color: rgb(3, 3, 55);
+    background-size: cover;
+    background-position: center center;
+
+}
+
+
+@media(max-width:991px)
+{
+    .game4
+    {
+        width: 80% !important;
+    }
+    .game5
+    {
+        width: 90% !important;
+    }
+}
+@media(min-width:992px)
+{
+    .game4
+    {
+        width: 30% !important;
+    }
+    .game5
+    {
+        width: 40% !important;
+    }
+    
+}
+
+.heading
+{
+    font-size: 3rem;
+    font-family: "Press Start 2P", system-ui;
+
+}
+
+
+.result > *
+{
+    font-family: "Rowdies", sans-serif !important;
+    font-size: 4rem !important;
+   
+
+}
+.neon-text {
+
+    font-family: "Rubik Mono One", monospace !important;
+    font-size: 4rem !important; 
+    color: #fff !important;
+}
+
+.x
+{
+    color: #acd8ff !important;
+}
+.o
+{
+    color: #ff7171 !important;
+}
+
+/* 3 x 3 */
+#game3
+{
+   width: 20rem;
+   height: 20rem;
+}
+.box3
+{
+   width: calc(100% / 3) ;
+   height: calc(100% / 3) ;
+}
+.game3 .vL1,
+.game3 .vL2
+
+{
+    position: absolute;
+    top: 0;
+    width: 5px;
+    padding: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    background-color: #e9bdff;
+}
+.game3 .vL1
+{
+    left: calc(100%  / 3);
+    
+}
+.game3 .vL2
+{
+
+    left: calc(100% / 1.5);
+}
+
+.game3 .hL1,
+.game3 .hL2
+
+{
+    position: absolute;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    padding: 0;
+    transform: translateY(-50%);
+    background-color: #e9bdff;
+}
+.game3 .hL1
+{
+    top: calc(100% / 3);
+    
+}
+.game3 .hL2
+{
+
+    top: calc(100% / 1.5);
+}
+
+
+.game3 .wV1,
+.game3 .wV2,
+.game3 .wV3
+
+{
+    position: absolute;
+    top: 0;
+    width: 8px;
+    padding: 0;
+    transform: translateX(-50%);
+    height: 0;
+    background-color: green;
+    transition: 0.5s;
+}
+.game3 .wV1
+{
+    left: calc(100% / 6);
+}
+.game3 .wV2
+{
+    left: calc(100% / 2);
+}
+.game3 .wV3
+{
+    transform: translateX(50%);
+    right: calc(100% / 6);
+}
+
+
+
+.game3 .wH1,
+.game3 .wH2,
+.game3 .wH3
+
+{
+    position: absolute;
+    left: 0;
+    height: 8px;
+    padding: 0;
+    transform: translateY(-50%);
+    width: 0;
+    background-color: green;
+    transition: 0.5s;
+}
+
+.game3 .wH1
+{
+    top: calc(100% / 6);
+    
+}
+.game3 .wH2
+{
+    top:  50%;
+    
+}
+.game3 .wH3
+{
+    transform: translateY(50%);
+    bottom:calc(100% / 6) ;
+    
+ }
+ 
+
+#game3::before,
+#game3::after
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    top: 0;
+    transform-origin: top;
+    transition: 0.5s;
+    background-color: green;
+    z-index: 10;
+    border-radius: 1rem;
+}
+#game3::before 
+{
+ 
+    height: var(--beforeBack,0px);
+    left: -4px;  
+    transform: rotate(-45deg);
+}
+.game3::after
+{ 
+    height: var(--afterBack,0px);
+    right: -4px;
+    transform: rotate(45deg);
+}
+/* 4 x 4 */
+.game4 .vL1,
+.game4 .vL2,
+.game4 .vL3
+{
+    position: absolute;
+    top: 0;
+    width: 5px;
+    padding: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    background-color: #e9bdff;
+}
+.game4 .vL1
+{
+    left: 25%;
+    
+}
+.game4 .vL2
+{
+
+    left: 50%;
+}
+.game4 .vL3
+{
+    left: 75%;
+
+}
+
+.game4 .hL1,
+.game4 .hL2,
+.game4 .hL3
+{
+    position: absolute;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    padding: 0;
+    transform: translateY(-50%);
+    background-color: #e9bdff;
+}
+.game4 .hL1
+{
+    top: 25%;
+    
+}
+.game4 .hL2
+{
+
+    top: 50%;
+}
+.game4 .hL3
+{
+    top: 75%;
+
+}
+
+ /* 5 x 5 */
+ .game5 .box5
+ {
+    width: 20% !important;
+
+ }
+.game5 .vL1,
+.game5 .vL2,
+.game5 .vL3,
+.game5 .vL4,
+.game5 .vL5,
+.game5 .vL6
+{
+    position: absolute;
+    top: 0;
+    width: 5px;
+    padding: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    background-color: #e9bdff;
+
+}
+
+.game5 .vL1
+{
+    left: 20%;
+    
+}
+.game5 .vL2
+{
+
+    left: 40%;
+}
+.game5 .vL3
+{
+    left: 60%;
+
+}
+.game5 .vL4
+{
+    left: 80%;
+
+}
+.game5 .vL5
+{
+    left: 0%;
+
+}
+.game5 .vL6
+{
+    left: 100%;
+
+}
+
+.game5 .hL1,
+.game5 .hL2,
+.game5 .hL3,
+.game5 .hL4,
+.game5 .hL5,
+.game5 .hL6
+
+{
+    position: absolute;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    padding: 0;
+    transform: translateY(-50%);
+    background-color: #e9bdff;
+}
+.game5 .hL1
+{
+    top: 20%;
+    
+}
+.game5 .hL2
+{
+
+    top: 40%;
+}
+.game5 .hL3
+{
+    top: 60%;
+
+}
+.game5 .hL4
+{
+    top: 80%;
+
+}
+.game5 .hL5
+{
+    top: 0%;
+
+}
+.game5 .hL6
+{
+    top: 100%;
+
+}

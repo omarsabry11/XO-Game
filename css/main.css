@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(3, 3, 55);
+    font-family: "Play", sans-serif;
+    overflow: auto;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+h1 {
+    font-weight: 600;
+    
+}
+
+
+
+
+a:hover {
+    background-color: rgb(3, 125, 3) !important;
+}
+
+@media(max-width:991px) {
+    .start-items {
+        width: 90% !important;
+    }
+
+ 
+}
+
+@media(min-width:992px) {
+    .start-items {
+        width: 35% !important;
+    }
+}
