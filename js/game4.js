@@ -30,7 +30,7 @@ function isWin() {
   
     for(i = 0;i<16;i+=4)
     {
-        for(let j=i;j<=i+2;j++)
+        for(let j=i;j<=i+1;j++)
         {
             if(container[j]==container[j+1]&&
                 container[j]==container[j+2]&&
