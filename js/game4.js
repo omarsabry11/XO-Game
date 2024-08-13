@@ -19,9 +19,6 @@ for (let i = 0; i < container.length; i++) {
 }
 
 
-console.log(container);
-
-
 
 let flag = false;
 let char;
@@ -91,7 +88,7 @@ function isWin() {
     return false;
 }
 
-console.log(boxes.length);
+
 
 
 
@@ -111,6 +108,7 @@ for (let i = 0; i < boxes.length; i++) {
             if (isWin() == true) {
 
                 document.querySelector('.result').innerHTML = `<h1 class=" text-white">${char} Win</h1>`;
+                return;
 
             }
             else if (count == 16 && !isWin()) {
@@ -135,6 +133,7 @@ for (let i = 0; i < boxes.length; i++) {
             if (isWin() == true) {
 
                 document.querySelector('.result').innerHTML = `<h1 class=" text-white">${char} Win</h1>`;
+                return;
             }
             else if (count == 16 && !isWin()) {
                 document.querySelector('.result').innerHTML = `<h1 class=" text-white">Draw</h1>`;

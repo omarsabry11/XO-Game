@@ -1,8 +1,10 @@
+
+
 body {
-    background-color: rgb(3, 3, 55);
+
+    background-image: url(../imgs/Background\ 6.jpg);
     font-family: "Play", sans-serif;
     overflow: auto;
-
 
 }
 
@@ -17,6 +19,28 @@ a {
 h1 {
     font-weight: 600;
     
+}
+.heading {
+ 
+    font-size: 3rem;
+    text-wrap: nowrap;
+    font-family: "Press Start 2P", system-ui;
+    background-image: linear-gradient(#eddd64, #799F0C);
+    color: transparent !important;
+    background-clip: text;
+    background-position: center;
+    background-size: cover;
+
+
+}
+@media(min-width:992px)
+{
+    .heading
+    {
+        margin:5rem 0 !important;
+        font-size: 3rem !important;
+    }
+
 }
 
 
