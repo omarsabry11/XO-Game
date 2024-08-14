@@ -1,0 +1,90 @@
+/* 5 x 5 */
+
+.neon-text
+{
+    font-size: 3rem !important;
+}
+.game5 {
+    width: 22rem;
+    height: 22rem;
+    background-color: rgba(140, 7, 161, 0.04);
+}
+
+.box5
+{
+    width: calc(100% / 5) !important;
+    height: calc(100% / 5) !important;
+    background-color: #244a7300;
+
+}
+.game5 .vL1,
+.game5 .vL2,
+.game5 .vL3,
+.game5 .vL4 {
+    position: absolute;
+    top: 0;
+    width: 0.5rem;
+    padding: 0;
+    border: 2px solid #DFFFFF;
+    transform: translateX(-50%);
+    height: 100%;
+
+}
+
+.game5 .vL1 {
+    left: 20%;
+
+}
+
+.game5 .vL2 {
+
+    left: 40%;
+}
+
+.game5 .vL3 {
+    left: 60%;
+
+}
+
+.game5 .vL4 {
+    left: 80%;
+
+}
+
+
+
+.game5 .hL1,
+.game5 .hL2,
+.game5 .hL3,
+.game5 .hL4 {
+    position: absolute;
+    left: 0;
+    height: 0.5rem;
+    width: 100%;
+    padding: 0;
+    transform: translateY(-50%);
+    
+    border: 2px solid #DFFFFF;
+
+}
+
+.game5 .hL1 {
+    top: 20%;
+
+}
+
+.game5 .hL2 {
+
+    top: 40%;
+}
+
+.game5 .hL3 {
+    top: 60%;
+
+}
+
+.game5 .hL4 {
+    top: 80%;
+
+}
+

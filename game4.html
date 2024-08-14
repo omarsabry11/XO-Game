@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/game4.css">
+
 </head>
 
 <body>
@@ -29,17 +31,17 @@
         <div class="dash-board my-5 row px-2  b justify-content-between align-items-center position-relative">
 
 
-            <div class="player1 bg-primary position-relative col-5  rounded-2 rounded-end-0">
+            <div class="player1  position-relative col-5  rounded-2 rounded-end-0">
 
                 <img class="position-absolute" src="imgs/x player.png" alt="">
                 <p class="m-0  text-white"> Player 1</p>
                 <span id="score1" class="score bg-primary position-absolute text-white px-3 py-1 start-50 translate-middle-x d-block">0</span>
             </div>
 
-            <p class="bg-danger rounded vs py-2 d-flex align-items-center text-white fw-bolder m-0 col-2">VS</p>
+            <p class="rounded vs py-2 d-flex align-items-center text-white fw-bolder m-0 col-2">VS</p>
 
 
-            <div class="player2  bg-primary col-5 position-relative rounded-2 rounded-start-0">
+            <div class="player2  col-5 position-relative rounded-2 rounded-start-0">
                 <img src="imgs/o player.png" alt="">
                 <p class="m-0 text-white">Player 2</p>
                 <span id="score2" class="score bg-primary position-absolute text-white px-3 py-1 start-50 translate-middle-x d-block">0</span>
@@ -61,82 +63,84 @@
             <div class="hL1"></div>
             <div class="hL2"></div>
             <div class="hL3"></div>
-            <div class="box4 position-relative  col-3 py-5">
+
+
+            <div class="box4 position-relative  col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
             </div>
-            <div class="box4 position-relative col-3 py-5">
+            <div class="box4 position-relative col-3 ">
 
 
 
@@ -147,8 +151,38 @@
 
 
 
-        <div class="result mt-4">
+        <div id="container-box" class="container-box position-fixed top-0 start-0 w-100 h-100">
 
+            <div id="light-box" class="alert-box position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center  rounded-2">
+                <div class="content d-flex flex-column justify-content-center align-items-center w-100">
+                    <!-- <h2 class="mb-4 py-2 px-4 mt-2"><span>X</span> Win</h2> -->
+                     <div class="d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="sign mt-3">X</h2>
+                        <h2 class="status mb-4"></h2>
+                     </div>
+            
+                    <div id="play-again" class="d-flex flex-column align-items-center justify-content-center gap-3 w-75">
+                        <h3  class="">Play Again</h3>
+                        <div class="d-flex justify-content-between w-100">
+                            <button class="yes border-0 rounded-2 px-3 py-1 bg-success text-white"><i class="fa-solid fa-check fa-xs"></i> Yes</button>
+                            <button class="no border-0 rounded-2 px-3 py-1 bg-danger text-white "><i class="fa-solid fa-x fa-xs"></i> <a href="index.html" class="text-decoration-none text-white">No</a></button>
+                        </div>
+                    </div>
+        
+        
+                    <div id="same-players" class="d-flex flex-column align-items-center justify-content-center gap-3 w-75 d-none">
+                        <h3 class="">Same Players</h3>
+                        <div class="d-flex justify-content-between w-100">
+                            <button class="yes border-0 rounded-2 px-3 py-1 bg-success text-white"><i class="fa-solid fa-check fa-xs"></i> Yes</button>
+                            <button class="no border-0 rounded-2 px-3 py-1 bg-danger text-white "><i class="fa-solid fa-x fa-xs"></i> No</button>
+                        </div>
+                    </div>
+    
+                </div>
+              
+    
+            </div>
+    
         </div>
     </div>
 
@@ -159,7 +193,9 @@
 
 
 
-    <script src="js/game4.js"></script>
+    <script type="module" src="js/jquery-3.7.1.min.js"></script>
+
+    <script type="module" src="js/game4.js"></script>
  
 </body>
 

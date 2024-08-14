@@ -1,0 +1,154 @@
+/* 3 x 3 */
+#game3 {
+
+    width: 22rem;
+    height: 22rem;
+    background-color: rgba(140, 7, 161, 0.04);
+}
+
+.box3 
+{
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    background-color: #244a7300;
+}
+
+
+.game3 .vL1,
+.game3 .vL2 {
+    position: absolute;
+    top: 0;
+    width: 0.5rem;
+    border: 2px solid #DFFFFF;
+    padding: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 10;
+
+}
+
+.game3 .vL1 {
+    left: calc(100% / 3);
+
+}
+
+.game3 .vL2 {
+
+    left: calc(100% / 1.5);
+}
+
+
+.game3 .hL1,
+.game3 .hL2 {
+    position: absolute;
+    left: 0;
+    height: 0.5rem;
+    border: 2px solid #DFFFFF;
+    width: 100%;
+    padding: 0;
+    transform: translateY(-50%);
+
+
+    z-index: 10;
+}
+
+.game3 .hL1 {
+    top: calc(100% / 3);
+
+}
+
+.game3 .hL2 {
+
+    top: calc(100% / 1.5);
+}
+
+
+.game3 .wV1,
+.game3 .wV2,
+.game3 .wV3 {
+    position: absolute;
+    top: 0;
+    width: 8px;
+    padding: 0;
+    transform: translateX(-50%);
+    height: 0;
+    transition: 0.5s;
+    background-color: rgb(255, 173, 21);
+
+}
+
+.game3 .wV1 {
+    left: calc(100% / 6);
+}
+
+.game3 .wV2 {
+    left: calc(100% / 2);
+}
+
+.game3 .wV3 {
+    transform: translateX(50%);
+    right: calc(100% / 6);
+}
+
+
+
+.game3 .wH1,
+.game3 .wH2,
+.game3 .wH3 {
+    position: absolute;
+    left: 0;
+    height: 8px;
+    padding: 0;
+    transform: translateY(-50%);
+    width: 0;
+    transition: 0.5s;
+    background-color: rgb(255, 173, 21);
+    
+
+    z-index: 10;
+}
+
+.game3 .wH1 {
+    top: calc(100% / 6);
+
+}
+
+.game3 .wH2 {
+    top: 50%;
+
+}
+
+.game3 .wH3 {
+    transform: translateY(50%);
+    bottom: calc(100% / 6);
+
+}
+
+
+#game3::before,
+#game3::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    top: 0;
+    transform-origin: top;
+    transition: 0.5s;
+    z-index: 10;
+    border-radius: 1rem;
+    background-color: rgb(255, 173, 21);
+
+
+}
+
+#game3::before {
+
+    height: var(--beforeBack, 0px);
+    left: -4px;
+    transform: rotate(-45deg);
+}
+
+.game3::after {
+    height: var(--afterBack, 0px);
+    right: -4px;
+    transform: rotate(45deg);
+}

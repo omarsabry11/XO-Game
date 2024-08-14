@@ -1,11 +1,7 @@
 "use strict"
 
 
-
-
-
-
-import { Player } from './Person.js'
+import { Player } from './Player.js'
 let boxes = document.querySelectorAll('.box3');
 
 let containerBox = document.querySelector('.container-box');
@@ -69,8 +65,6 @@ $('#same-players .no').on('click', function () {
     score2.textContent = 0;
     $("#container-box").hide();
 })
-
-
 
 document.querySelector('.result span').innerHTML = `X`;
 
@@ -278,6 +272,10 @@ for (let i = 0; i < boxes.length; i++) {
 
     })
 }
+
+
+
+
 
 
 
