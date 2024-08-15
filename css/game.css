@@ -3,6 +3,64 @@
     font-family: light-box;
     src: url(../web\ fonts/VeniteAdoremusStraight-Yzo6v.ttf);
 }
+.game3,
+.game4,
+.game5
+{
+    width: 22rem;
+    height: 22rem;
+    background-color: rgba(140, 7, 161, 0.04);
+}
+
+@media (max-width:576px)
+{
+    .game3,
+    .game4,
+    .game5
+    {
+        width: 15rem !important;
+        height: 15rem !important;
+
+    }
+}
+@media (max-width:768px)
+{
+    .game3,
+    .game4,
+    .game5
+    {
+        width: 18rem !important;
+        height: 18rem !important;
+
+    }
+}
+@media (max-width:991px)
+{
+    .game3,
+    .game4,
+    .game5
+    {
+        width: 22rem !important;
+        height: 22rem !important;
+
+    }
+}
+@media (min-width:992px)
+{
+    .game3,
+    .game4,
+    .game5
+    {
+        width: 25rem !important;
+        height: 25rem !important;
+
+    }
+    .game3
+    {
+        width: 22rem !important;
+        height: 22rem !important;
+    }
+}
 
 
 
@@ -73,6 +131,7 @@
 .player1 p,
 .player2 p {
     font-family: "Rowdies", sans-serif;
+
     letter-spacing: 3px;
 }
 

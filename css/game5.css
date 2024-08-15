@@ -4,11 +4,6 @@
 {
     font-size: 3rem !important;
 }
-.game5 {
-    width: 22rem;
-    height: 22rem;
-    background-color: rgba(140, 7, 161, 0.04);
-}
 
 .box5
 {
@@ -87,4 +82,59 @@
     top: 80%;
 
 }
+
+.game5 .wH
+{
+    position: absolute;
+    position: absolute;
+    left: 0;
+    height: 8px;
+    padding: 0;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    background-color: rgb(255, 173, 21);
+    z-index: 10;
+    width: 0;
+    transition: width 0.5s 0.1s;
+    top: 0;
+}
+.game5 .wV
+{
+    position: absolute;
+    width: 8px;
+    padding: 0;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    background-color: rgb(255, 173, 21);
+    height: 0;
+    top: 0;
+    transition: height 0.5s 0.1s;
+}
+.game5 .mD,
+.game5 .sD
+{
+    position: absolute;
+    width: 8px;
+    transform-origin: top;
+    transition: 0.5s;
+    z-index: 10;
+    padding: 0;
+    background-color: rgb(255, 173, 21);
+    height: 0;
+    transition: height 0.5s 0.1s;
+}
+.game5 .mD
+{
+
+    transform: rotate(-45deg);
+
+}
+
+
+.game5 .sD
+{
+    transform: rotate(45deg);
+   
+}
+
 

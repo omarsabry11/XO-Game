@@ -26,7 +26,6 @@ player1.score = 0;
 player2.score = 0;
 
 
-
 for (let i = 0; i < container.length; i++) {
     container[i] = false;
 }
@@ -74,63 +73,19 @@ for (let i = 0; i < boxes.length; i++) {
 
 
         if (xTurn) {
-            
-            if (container[i] == false) 
-                {
-                    boxes[i].innerHTML = x;
-                    container[i] = 'X';
-                    count++;
-                    xTurn = !xTurn;
-                    document.querySelector('.result span').innerHTML = `${xTurn?'X':'O'}`;
+
+            if (container[i] == false) {
+                boxes[i].innerHTML = x;
+                container[i] = 'X';
+                count++;
+                xTurn = !xTurn;
+                document.querySelector('.result span').innerHTML = `${xTurn ? 'X' : 'O'}`;
             }
 
             if (isWin() == true) {
 
 
-                if (position == 'v') {
-                    if (index == 0) {
-                        document.querySelector('.wV1').style.height = '100%';
-
-                    }
-                    if (index == 1) {
-                        document.querySelector('.wV2').style.height = '100%';
-
-                    }
-                    if (index == 2) {
-                        document.querySelector('.wV3').style.height = '100%';
-
-                    }
-
-
-                }
-                if (position == 'h') {
-                    if (index == 0) {
-                        document.querySelector('.wH1').style.width = '100%'
-                    }
-                    if (index == 3) {
-                        document.querySelector('.wH2').style.width = '100%'
-                    }
-                    if (index == 6) {
-                        document.querySelector('.wH3').style.width = '100%'
-                    }
-
-                }
-
-                if (position == 'mD') {
-                    let st = document.getElementById('game3');
-                    st.style.setProperty('--beforeBack', '141.42%');
-
-
-                    
-                }
-                if (position == 'sD') {
-
-                    let st = document.getElementById('game3');
-                    // let css_of_after = window.getComputedStyle(st,'::after');
-                    st.style.setProperty('--afterBack', '141.42%')
-                }
-
-
+                setWinLines();
                 player1.score++;
                 score1.textContent = player1.score;
                 setLightBox();
@@ -151,7 +106,6 @@ for (let i = 0; i < boxes.length; i++) {
                 }
 
 
-
             }
             else if (count == 9 && !isWin()) {
 
@@ -170,8 +124,8 @@ for (let i = 0; i < boxes.length; i++) {
 
 
         }
-        else 
-        {
+
+        else {
 
 
             if (container[i] == false) {
@@ -179,60 +133,15 @@ for (let i = 0; i < boxes.length; i++) {
                 container[i] = 'O';
                 count++;
                 xTurn = !xTurn;
-                document.querySelector('.result span').innerHTML = `${xTurn?'X':'O'}`;
-
+                document.querySelector('.result span').innerHTML = `${xTurn ? 'X' : 'O'}`;
 
             }
             if (isWin() == true) {
 
-                if (position == 'v') {
-                    if (index == 0) {
-                        document.querySelector('.wV1').style.height = '100%';
-
-                    }
-                    if (index == 1) {
-                        document.querySelector('.wV2').style.height = '100%';
-
-                    }
-                    if (index == 2) {
-                        document.querySelector('.wV3').style.height = '100%';
-
-                    }
-
-
-                }
-                if (position == 'h') {
-                    if (index == 0) {
-                        document.querySelector('.wH1').style.width = '100%'
-                    }
-                    if (index == 3) {
-                        document.querySelector('.wH2').style.width = '100%'
-                    }
-                    if (index == 6) {
-                        document.querySelector('.wH3').style.width = '100%'
-                    }
-
-                }
-
-                if (position == 'mD') {
-                    let st = document.getElementById('game3');
-                    // let css_of_before = window.getComputedStyle(st,'::before');
-                    st.style.setProperty('--beforeBack', '141.42%')
-
-                }
-                if (position == 'sD') {
-
-                    let st = document.getElementById('game3');
-                    // let css_of_after = window.getComputedStyle(st,'::after');
-                    st.style.setProperty('--afterBack', '141.42%')
-                }
-
-
-
+               setWinLines();
                 player2.score++;
                 score2.textContent = `${player2.score}`;
                 setLightBox();
-
                 document.querySelector('#light-box h2.sign').innerHTML = "O";
                 document.querySelector('#light-box h2.status').innerHTML = "Winner";
                 document.querySelector('#light-box h2.sign').style.color = '#e36464'
@@ -338,13 +247,11 @@ function reset() {
     xNewTurn = !xNewTurn;
     xTurn = xNewTurn;
 
-    document.querySelector('.wV1').style.height = '0%';
-    document.querySelector('.wV2').style.height = '0%';
-    document.querySelector('.wV3').style.height = '0%';
+    document.querySelector('.wH').style.width = '0%';
+    document.querySelector('.wV').style.height = '0%';
+   
 
-    document.querySelector('.wH1').style.width = '0%';
-    document.querySelector('.wH2').style.width = '0%';
-    document.querySelector('.wH3').style.width = '0%';
+
 
     let st = document.getElementById('game3');
     st.style.setProperty('--beforeBack', '0%');
@@ -359,5 +266,88 @@ function setLightBox() {
     lightBox.style.width = 0;
     lightBox.style.height = 0;
     document.querySelector('#light-box .content').style.scale = 0;
+
+}
+
+
+
+
+function setWinLines() {
+    if (position == 'v') {
+
+        if (index == 0) {
+
+
+            document.querySelector('.wV').style.left = '16.667%';
+            document.querySelector('.wV').style.height = '100%';
+
+
+        }
+        if (index == 1) {
+
+            document.querySelector('.wV').style.left = '50%';
+            document.querySelector('.wV').style.height = '100%';
+
+
+
+        }
+        if (index == 2) {
+
+            document.querySelector('.wV').style.left = '83.333%';
+            document.querySelector('.wV').style.height = '100%';
+
+
+
+        }
+
+
+
+
+    }
+
+
+    if (position == 'h') {
+
+        if (index == 0) {
+
+
+            document.querySelector('.wH').style.top = '16.667%';
+            document.querySelector('.wH').style.width = '100%';
+
+
+
+
+        }
+        else if (index == 3) {
+
+            document.querySelector('.wH').style.top = '50%';
+            document.querySelector('.wH').style.width = '100%';
+
+
+
+        }
+        else if (index == 6) {
+
+            document.querySelector('.wH').style.top = '83.33%';
+            document.querySelector('.wH').style.width = '100%';
+
+
+
+        }
+
+
+
+    }
+
+    if (position == 'mD') {
+        let st = document.getElementById('game3');
+        st.style.setProperty('--beforeBack', '141.42%');
+
+    }
+    if (position == 'sD') {
+
+        let st = document.getElementById('game3');
+        st.style.setProperty('--afterBack', '141.42%')
+    }
 
 }

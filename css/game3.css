@@ -1,10 +1,4 @@
 /* 3 x 3 */
-#game3 {
-
-    width: 22rem;
-    height: 22rem;
-    background-color: rgba(140, 7, 161, 0.04);
-}
 
 .box3 
 {
@@ -62,69 +56,6 @@
     top: calc(100% / 1.5);
 }
 
-
-.game3 .wV1,
-.game3 .wV2,
-.game3 .wV3 {
-    position: absolute;
-    top: 0;
-    width: 8px;
-    padding: 0;
-    transform: translateX(-50%);
-    height: 0;
-    transition: 0.5s;
-    background-color: rgb(255, 173, 21);
-
-}
-
-.game3 .wV1 {
-    left: calc(100% / 6);
-}
-
-.game3 .wV2 {
-    left: calc(100% / 2);
-}
-
-.game3 .wV3 {
-    transform: translateX(50%);
-    right: calc(100% / 6);
-}
-
-
-
-.game3 .wH1,
-.game3 .wH2,
-.game3 .wH3 {
-    position: absolute;
-    left: 0;
-    height: 8px;
-    padding: 0;
-    transform: translateY(-50%);
-    width: 0;
-    transition: 0.5s;
-    background-color: rgb(255, 173, 21);
-    
-
-    z-index: 10;
-}
-
-.game3 .wH1 {
-    top: calc(100% / 6);
-
-}
-
-.game3 .wH2 {
-    top: 50%;
-
-}
-
-.game3 .wH3 {
-    transform: translateY(50%);
-    bottom: calc(100% / 6);
-
-}
-
-
 #game3::before,
 #game3::after {
     content: '';
@@ -152,3 +83,37 @@
     right: -4px;
     transform: rotate(45deg);
 }
+
+
+.game3 .wH
+{
+    position: absolute;
+    left: 0;
+    height: 8px;
+    padding: 0;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    background-color: rgb(255, 173, 21);
+    z-index: 10;
+    width: 0;
+    transition: width 0.5s 0.1s;
+    top: 0;
+}
+
+.game3 .wV
+{
+    position: absolute;
+    width: 8px;
+    padding: 0;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    background-color: rgb(255, 173, 21);
+    height: 0;
+    top: 0;
+    height: 0;
+    transition: height 0.5s 0.1s;
+    
+    
+}
+
+
